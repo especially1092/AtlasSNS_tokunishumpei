@@ -7,7 +7,12 @@
                 <ul>
                     <li><a href="">ホーム</a></li>
                     <li><a href="">プロフィール</a></li>
-                    <li><a href="">ログアウト</a></li>
+                    <li>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit">ログアウト</button>
+                        </form>
+                    </li>
                 </ul>
             </div>
         </div>
