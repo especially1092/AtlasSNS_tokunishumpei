@@ -3,6 +3,7 @@
   <!-- 適切なURLを入力してください -->
   {!! Form::open(['url' => 'login']) !!}
 
+  @csrf  {{-- これがあるかチェック --}}
   <p>AtlasSNSへようこそ</p>
 
   {{ Form::label('email') }}
