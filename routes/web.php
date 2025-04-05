@@ -21,13 +21,13 @@ use Illuminate\Support\Facades\Route;
 require __DIR__ . '/auth.php';
 
 Route::middleware('auth')->group(function () {
-    Route::get('top', [PostsController::class, 'index']);
+    Route::get('top', [PostsController::class, 'index'])->name('top');
 
-    Route::get('profile', [ProfileController::class, 'profile']);
+    Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
 
-    Route::get('search', [UsersController::class, 'search']);
+    Route::get('search', [UsersController::class, 'search'])->name('search');
 
-    Route::get('follow-list', [PostsController::class, 'index']);
-    Route::get('follower-list', [PostsController::class, 'index']);
+    Route::get('follow-list', [PostsController::class, 'index'])->name('follow-list');
+    Route::get('follower-list', [PostsController::class, 'index'])->name('follower-list');
 
 });
